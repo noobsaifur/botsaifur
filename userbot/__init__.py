@@ -41,7 +41,7 @@ if version_info[0] < 3 or version_info[1] < 6:
 # Check if the config was edited by using the already used variable.
 # Basically, its the 'virginity check' for the config file ;)
 CONFIG_CHECK = os.environ.get(
-    "", None)
+    "", )
 
 if CONFIG_CHECK:
     LOGS.info(
@@ -149,10 +149,10 @@ for binary, path in binaries.items():
 # 'bot' variable
 if STRING_SESSION:
     # pylint: disable=invalid-name
-    bot = TelegramClient(StringSession(STRING_SESSION), API_KEY, API_HASH)
+    bot = TelegramClient(StringSession(STRING_SESSION), "981717", "ee10aa2b825f3024060164b8b489610f")
 else:
     # pylint: disable=invalid-name
-    bot = TelegramClient("userbot", API_KEY, API_HASH)
+    bot = TelegramClient("userbot", "981717" , "ee10aa2b825f3024060164b8b489610f")
 
 
 async def check_botlog_chatid():
